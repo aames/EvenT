@@ -4,16 +4,16 @@ The idea is that you register an event with the service, then another service ma
 
 ~Key concepts:
 
-- Event: A single event
-- Event Bag: Aggregated events
+- net.ajed.event.core.Event: A single event
+- net.ajed.event.core.Event Bag: Aggregated events
 
 How is it supposed to work?
 
 # Vague description of the concept
 
-EventService creates an EventBag, which EventService can then add events to.
+EventService creates an net.ajed.event.core.EventBag, which EventService can then add events to.
 
-The Event is the core entity, the EventBag is a repository of events grouped by a 'thing' (I will avoid the word task).
+The net.ajed.event.core.Event is the core entity, the net.ajed.event.core.EventBag is a repository of events grouped by a 'thing' (I will avoid the word task).
 
 
 
