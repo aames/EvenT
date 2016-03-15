@@ -1,3 +1,5 @@
+package net.ajed.event.core;
+
 import org.bson.types.ObjectId;
 
 import java.util.Date;
@@ -80,7 +82,7 @@ public class Event {
     // etc...
     @Override
     public String toString() {
-        return "Event{" +
+        return "net.ajed.event.core.Event{" +
                 "id=" + id +
                 ", dateTimeCreated=" + dateTimeCreated +
                 ", dateTimeEventExpiry=" + dateTimeEventExpiry +

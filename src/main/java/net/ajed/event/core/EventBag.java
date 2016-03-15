@@ -1,3 +1,5 @@
+package net.ajed.event.core;
+
 import org.bson.types.ObjectId;
 
 import java.util.ArrayList;
