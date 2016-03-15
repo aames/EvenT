@@ -35,5 +35,8 @@ public class EventBag {
         //TODO: complete logic
     }
 
+    public List<Event> getEvents(){
+        return this.events;
+    }
 
 }
