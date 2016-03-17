@@ -1,10 +1,5 @@
-<<<<<<< HEAD:src/main/java/Event.java
-=======
 package net.ajed.event.core;
 
-import org.bson.types.ObjectId;
-
->>>>>>> 5abe6ac5d300dabfccddb67b51f2e0cb1c399818:src/main/java/net/ajed/event/core/Event.java
 import java.util.Date;
 import java.util.UUID;
 
@@ -20,6 +15,7 @@ public class Event {
 
     // Only use this constructor
     public Event(String uniqueName, String description){
+        this.id = UUID.randomUUID();
         this.dateTimeCreated = new Date();
         this.uniqueName = uniqueName;
         if (description != null){
