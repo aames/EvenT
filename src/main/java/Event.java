@@ -1,9 +1,8 @@
-import org.bson.types.ObjectId;
-
 import java.util.Date;
+import java.util.UUID;
 
 public class Event {
-    private ObjectId id;
+    private UUID id;
     private Date dateTimeCreated;
     private Date dateTimeEventExpiry;
     private Date dateTimeCompleted;
@@ -36,7 +35,7 @@ public class Event {
     }
 
     // Getters
-    public ObjectId getId() {
+    public UUID getId() {
         return id;
     }
 

@@ -1,25 +1,38 @@
-import org.bson.types.ObjectId;
-
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
 public class EventBag {
-    private ObjectId id;
     private UUID eventBagId;
     private String eventName;
+    private List<String> tags;
     private List<Event> events;
 
     public EventBag(String eventName){
-        this.id = new ObjectId();
         this.eventName = eventName;
         this.events = new ArrayList<Event>();
         this.eventBagId = UUID.randomUUID();
+        this.tags = new ArrayList<String>();
+    }
+
+    public EventBag(String eventName, List<String> tags){
+        this.eventName = eventName;
+        this.events = new ArrayList<Event>();
+        this.eventBagId = UUID.randomUUID();
+        this.tags = new ArrayList<String>();
+        this.tags.addAll(tags);
     }
 
     public void addEvent(Event event){
         // TODO: if name is unique then:
         this.events.add(event);
+    }
+
+    public void addEventWithExpiry(Event event, Date expiry){
+        // TODO: if name is unique then:
+        this.events.add(event);
+        // expire setup
     }
 
     public void markEventComplete(String uniqueEventName, String description){
