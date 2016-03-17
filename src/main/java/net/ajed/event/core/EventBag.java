@@ -1,3 +1,10 @@
+<<<<<<< HEAD:src/main/java/EventBag.java
+=======
+package net.ajed.event.core;
+
+import org.bson.types.ObjectId;
+
+>>>>>>> 5abe6ac5d300dabfccddb67b51f2e0cb1c399818:src/main/java/net/ajed/event/core/EventBag.java
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -48,5 +55,8 @@ public class EventBag {
         //TODO: complete logic
     }
 
+    public List<Event> getEvents(){
+        return this.events;
+    }
 
 }
