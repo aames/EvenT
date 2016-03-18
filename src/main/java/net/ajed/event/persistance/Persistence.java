@@ -1,4 +1,6 @@
 package net.ajed.event.persistance;
 
-public class Persistance {
+public class Persistence {
+
+
 }
