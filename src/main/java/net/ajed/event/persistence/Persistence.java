@@ -41,9 +41,9 @@ public class Persistence {
 
     private boolean getProperties(String configFileRelativePathName) throws IOException {
         InputStream inputStream = null;
-        try {
+        try (InputStream inputStream = getClass().getClassLoader().getResourceAsStream(configFileRelativePathName);)  {
             Properties properties = new Properties();
-            inputStream = getClass().getClassLoader().getResourceAsStream(configFileRelativePathName);
+            //inputStream = getClass().getClassLoader().getResourceAsStream(configFileRelativePathName);
 
             if (inputStream != null) {
                 properties.load(inputStream);
@@ -58,9 +58,10 @@ public class Persistence {
         } catch (Exception e) {
             logger.error("In getProperties()", e);
             throw e;
-        } finally {
-            inputStream.close();
-        }
+        } 
+        //finally {
+        //    inputStream.close();
+        //}
         return true;
     }
 
