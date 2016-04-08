@@ -1,5 +1,7 @@
 #EvenT 
 
+![](https://travis-ci.org/aames/EvenT.svg?branch=master)
+
 ## Introduction
 
 This project is a microservice that handles events. Why, you might ask.
