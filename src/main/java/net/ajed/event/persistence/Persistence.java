@@ -40,7 +40,7 @@ public class Persistence {
     }
 
     private boolean getProperties(String configFileRelativePathName) throws IOException {
-        InputStream inputStream = null;
+        //InputStream inputStream = null;
         try (InputStream inputStream = getClass().getClassLoader().getResourceAsStream(configFileRelativePathName);)  {
             Properties properties = new Properties();
             //inputStream = getClass().getClassLoader().getResourceAsStream(configFileRelativePathName);
