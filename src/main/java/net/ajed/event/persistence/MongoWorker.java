@@ -5,6 +5,7 @@ import com.mongodb.MongoCredential;
 import com.mongodb.ServerAddress;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
+import net.ajed.event.interfaces.Persist;
 import org.bson.Document;
 
 import java.util.Arrays;
@@ -13,7 +14,7 @@ import java.util.Arrays;
  * MongoDB specific implementation
  */
 
-public class MongoWorker {
+public class MongoWorker implements Persist {
 
     private MongoClient mc;
     private MongoCredential credential;
