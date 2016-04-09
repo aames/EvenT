@@ -14,9 +14,12 @@ import java.util.HashMap;
  */
 public class Persistence  {
     Logger logger = LoggerFactory.getLogger(Persistence.class);
-    private HashMap<String, String> configuration = PersistenceConfigLoader.getConfiguration();
+    private PersistenceConfigLoader pl = new PersistenceConfigLoader();
+    // TODO: Load value from app.config instead
+    private HashMap<String, String> configuration = pl.getConfiguration("db.config");
 
-    // Method stubs
-    public boolean addEventToBag(Event e){ return true;}
+    // Methods
+    public boolean addEventToBag(Event e){ return true; }
     public boolean addEventBagWithEvents(EventBag eb){ return true; }
+
 }

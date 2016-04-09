@@ -16,13 +16,13 @@ import java.util.Properties;
  */
 public class PersistenceConfigLoader {
 
-    final Logger logger = LoggerFactory.getLogger(getClass());
+    final Logger logger = LoggerFactory.getLogger(PersistenceConfigLoader.class);
 
-    private PersistenceConfigLoader(){
+    public PersistenceConfigLoader(){
 
     }
 
-    public static HashMap<String, String> getConfiguration(String configFileRelativePathName){
+    public HashMap<String, String> getConfiguration(String configFileRelativePathName){
         HashMap<String, String> configurationElements = new HashMap<>();
         //TODO: Placeholder. WIP.
         logger.info("Reading db.config");

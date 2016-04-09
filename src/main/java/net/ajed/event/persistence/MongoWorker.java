@@ -5,16 +5,20 @@ import com.mongodb.MongoCredential;
 import com.mongodb.ServerAddress;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
-import net.ajed.event.interfaces.Persist;
+import net.ajed.event.core.Event;
+import net.ajed.event.core.EventBag;
+import net.ajed.event.interfaces.IPersist;
 import org.bson.Document;
 
 import java.util.Arrays;
+import java.util.List;
+import java.util.UUID;
 
 /**
  * MongoDB specific implementation
  */
 
-public class MongoWorker implements Persist {
+public class MongoWorker implements IPersist {
 
     private MongoClient mc;
     private MongoCredential credential;
@@ -43,5 +47,40 @@ public class MongoWorker implements Persist {
         this.mc = new MongoClient(new ServerAddress(this.hostname, this.port), Arrays.asList(this.credential));
         this.database = this.mc.getDatabase(this.db);
         this.collection = this.database.getCollection(eventsCollection);
+    }
+
+    @Override
+    public boolean connect() {
+        return false;
+    }
+
+    @Override
+    public UUID createNewBag(String name) {
+        return null;
+    }
+
+    @Override
+    public EventBag findBag(String id) {
+        return null;
+    }
+
+    @Override
+    public Event findEvent(String bagId) {
+        return null;
+    }
+
+    @Override
+    public List<EventBag> findIncompleteEventBags() {
+        return null;
+    }
+
+    @Override
+    public List<EventBag> findExpiredEventBags() {
+        return null;
+    }
+
+    @Override
+    public List<EventBag> findEventBagsByName() {
+        return null;
     }
 }

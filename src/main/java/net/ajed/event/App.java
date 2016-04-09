@@ -39,12 +39,12 @@ public class App {
         while(true){
             System.out.println("Enter a command, such as reload or exit.");
             String input = s.nextLine();
-            if (input.toLowerCase() == "exit") {
+            if (input.toLowerCase().contains("exit")) {
                 shutdown();
                 break;
-            } else if (input.toLowerCase() == "reload"){
+            } else if (input.toLowerCase().contains("reload")){
                 reloadConfigFiles();
-            } else if (input.toLowerCase() == "help"){
+            } else if (input.toLowerCase().contains("help")){
                 System.out.println("Commands are:");
                 System.out.println("\t reload : stops the application and reloads configuration files to apply any changes.");
                 System.out.println("\t exit : stops the application after closing database connections.");
