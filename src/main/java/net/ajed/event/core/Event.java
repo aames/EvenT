@@ -17,6 +17,7 @@ public class Event {
     public Event(String uniqueName, String description){
         this.id = UUID.randomUUID();
         this.dateTimeCreated = new Date();
+        this.dateTimeCompleted = null;
         this.uniqueName = uniqueName;
         if (description != null){
             this.description = description;
